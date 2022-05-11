@@ -1,9 +1,8 @@
-﻿using System.IO;
-using System.Text;
+﻿using System.Text;
 using Xunit;
-using Serilog.Formatting.Raw;
 using Serilog.Sinks.RollingFileAlternate.Sinks.SizeRollingFileSink;
 using Serilog.Sinks.RollingFileAlternate.Tests.Support;
+using Serilog.Formatting.Compact;
 
 namespace Serilog.Sinks.RollingFileAlternate.Tests
 {
@@ -22,7 +21,7 @@ namespace Serilog.Sinks.RollingFileAlternate.Tests
 
         private static AlternateRollingFileSink AlternateRollingFileSinkFileSink()
         {
-            var formatter = new RawFormatter();
+            var formatter = new CompactJsonFormatter();
 
             return new AlternateRollingFileSink(@"c:\temp", formatter, 100000, null, Encoding.UTF8);
         }

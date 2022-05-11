@@ -2,9 +2,9 @@
 using System.IO;
 using System.Linq;
 using Xunit;
-using Serilog.Formatting.Raw;
 using Serilog.Sinks.RollingFileAlternate.Sinks.SizeRollingFileSink;
 using Serilog.Sinks.RollingFileAlternate.Tests.Support;
+using Serilog.Formatting.Compact;
 
 namespace Serilog.Sinks.RollingFileAlternate.Tests
 {
@@ -18,7 +18,7 @@ namespace Serilog.Sinks.RollingFileAlternate.Tests
                 using (var dir = new TestDirectory())
                 {
                     var latest = SizeLimitedLogFileInfo.GetLatestOrNew(new DateTime(2015, 01, 15), dir.LogDirectory, string.Empty);
-                    Assert.Equal<uint>(latest.Sequence, 1);
+                    Assert.Equal<uint>(1, latest.Sequence);
                 }
             }
 
@@ -32,7 +32,7 @@ namespace Serilog.Sinks.RollingFileAlternate.Tests
                     dir.CreateLogFile(date, 2);
                     dir.CreateLogFile(date, 3);
                     var latest = SizeLimitedLogFileInfo.GetLatestOrNew(new DateTime(2015, 01, 15), dir.LogDirectory, string.Empty);
-                    Assert.Equal<uint>(latest.Sequence, 3);
+                    Assert.Equal<uint>(3, latest.Sequence);
                 }
             }
         }
@@ -41,13 +41,13 @@ namespace Serilog.Sinks.RollingFileAlternate.Tests
         public void ItCreatesNewFileWhenSizeLimitReached()
         {
             using (var dir = new TestDirectory())
-            using (var sizeRollingSink = new AlternateRollingFileSink(dir.LogDirectory, new RawFormatter(), 10))
+            using (var sizeRollingSink = new AlternateRollingFileSink(dir.LogDirectory, new CompactJsonFormatter(), 10))
             {
                 var logEvent = Some.InformationEvent();
                 sizeRollingSink.Emit(logEvent);
-                Assert.Equal<uint>(sizeRollingSink.CurrentLogFile.LogFileInfo.Sequence, 1);
+                Assert.Equal<uint>(1, sizeRollingSink.CurrentLogFile.LogFileInfo.Sequence);
                 sizeRollingSink.Emit(logEvent);
-                Assert.Equal<uint>(sizeRollingSink.CurrentLogFile.LogFileInfo.Sequence, 2);
+                Assert.Equal<uint>(2, sizeRollingSink.CurrentLogFile.LogFileInfo.Sequence);
             }
         }
 

@@ -10,12 +10,12 @@ namespace ExampleApp
         {
             var logger = new LoggerConfiguration().MinimumLevel.Verbose()
                 .WriteTo.RollingFileAlternate(@"C:\logs\serilogtest\", fileSizeLimitBytes: 4096)
-                .WriteTo.ColoredConsole()
+                .WriteTo.Console()
                 .CreateLogger();
 
             var loggerWithPrefix = new LoggerConfiguration().MinimumLevel.Verbose()
                 .WriteTo.RollingFileAlternate(@"C:\logs\serilogtest\", fileSizeLimitBytes: 4096, logFilePrefix:"sample")
-                .WriteTo.ColoredConsole()
+                .WriteTo.Console()
                 .CreateLogger();
 
             int messageCount = 0;

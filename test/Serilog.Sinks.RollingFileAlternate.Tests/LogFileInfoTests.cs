@@ -10,7 +10,7 @@ namespace Serilog.Sinks.RollingFileAlternate.Tests
         public void RendersCorrectlyWithDateAndSequenceNumber()
         {
             var sut = new SizeLimitedLogFileInfo(new DateTime(2015, 01, 15), 77, string.Empty);
-            Assert.Equal(sut.FileName, "20150115-00077.log");
+            Assert.Equal("20150115-00077.log", sut.FileName);
         }
     }
 }

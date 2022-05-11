@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{9F725242-157F-444F-8029-8BAE22D3F78F}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,11 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7647A4BD-3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{11FB22BB-F1D5-47D4-AA2F-8EBD0103FF25}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Serilog.Sinks.RollingFileAlternate", "src\Serilog.Sinks.RollingFileAlternate\Serilog.Sinks.RollingFileAlternate.xproj", "{F836EDD6-5958-4DA5-B9B8-D77113083F22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Sinks.RollingFileAlternate", "src\Serilog.Sinks.RollingFileAlternate\Serilog.Sinks.RollingFileAlternate.csproj", "{BAB978CF-89AF-49FE-BD39-36AB6EABF3C8}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Serilog.Sinks.RollingFileAlternate.Tests", "test\Serilog.Sinks.RollingFileAlternate.Tests\Serilog.Sinks.RollingFileAlternate.Tests.xproj", "{060CF269-C2BF-4529-8395-BDE3C92FD151}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serilog.Sinks.RollingFileAlternate.Tests", "test\Serilog.Sinks.RollingFileAlternate.Tests\Serilog.Sinks.RollingFileAlternate.Tests.csproj", "{36D0FD63-4613-41B6-AEF0-9AC72F6CF2E0}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ExampleApp", "examples\ExampleApp\ExampleApp.xproj", "{36459431-03AE-4CD5-B4E5-1784571D9D5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApp", "examples\ExampleApp\ExampleApp.csproj", "{ED0227E9-CEBD-4D14-A7AF-C9CD34679E2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,25 +29,25 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F836EDD6-5958-4DA5-B9B8-D77113083F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F836EDD6-5958-4DA5-B9B8-D77113083F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F836EDD6-5958-4DA5-B9B8-D77113083F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F836EDD6-5958-4DA5-B9B8-D77113083F22}.Release|Any CPU.Build.0 = Release|Any CPU
-		{060CF269-C2BF-4529-8395-BDE3C92FD151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{060CF269-C2BF-4529-8395-BDE3C92FD151}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{060CF269-C2BF-4529-8395-BDE3C92FD151}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{060CF269-C2BF-4529-8395-BDE3C92FD151}.Release|Any CPU.Build.0 = Release|Any CPU
-		{36459431-03AE-4CD5-B4E5-1784571D9D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36459431-03AE-4CD5-B4E5-1784571D9D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36459431-03AE-4CD5-B4E5-1784571D9D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36459431-03AE-4CD5-B4E5-1784571D9D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAB978CF-89AF-49FE-BD39-36AB6EABF3C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB978CF-89AF-49FE-BD39-36AB6EABF3C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB978CF-89AF-49FE-BD39-36AB6EABF3C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB978CF-89AF-49FE-BD39-36AB6EABF3C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36D0FD63-4613-41B6-AEF0-9AC72F6CF2E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36D0FD63-4613-41B6-AEF0-9AC72F6CF2E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36D0FD63-4613-41B6-AEF0-9AC72F6CF2E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36D0FD63-4613-41B6-AEF0-9AC72F6CF2E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED0227E9-CEBD-4D14-A7AF-C9CD34679E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0227E9-CEBD-4D14-A7AF-C9CD34679E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0227E9-CEBD-4D14-A7AF-C9CD34679E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0227E9-CEBD-4D14-A7AF-C9CD34679E2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F836EDD6-5958-4DA5-B9B8-D77113083F22} = {3E6972F1-7310-4BBF-A220-6B177FF4E65C}
-		{060CF269-C2BF-4529-8395-BDE3C92FD151} = {7647A4BD-398B-4497-B740-D0E128381C37}
-		{36459431-03AE-4CD5-B4E5-1784571D9D5C} = {11FB22BB-F1D5-47D4-AA2F-8EBD0103FF25}
+		{BAB978CF-89AF-49FE-BD39-36AB6EABF3C8} = {3E6972F1-7310-4BBF-A220-6B177FF4E65C}
+		{36D0FD63-4613-41B6-AEF0-9AC72F6CF2E0} = {7647A4BD-398B-4497-B740-D0E128381C37}
+		{ED0227E9-CEBD-4D14-A7AF-C9CD34679E2F} = {11FB22BB-F1D5-47D4-AA2F-8EBD0103FF25}
 	EndGlobalSection
 EndGlobal

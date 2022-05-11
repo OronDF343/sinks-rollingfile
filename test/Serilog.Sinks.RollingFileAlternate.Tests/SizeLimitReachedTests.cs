@@ -2,9 +2,9 @@
 using System.IO;
 using System.Text;
 using Xunit;
-using Serilog.Formatting.Raw;
 using Serilog.Sinks.RollingFileAlternate.Sinks.SizeRollingFileSink;
 using Serilog.Sinks.RollingFileAlternate.Tests.Support;
+using Serilog.Formatting.Compact;
 
 namespace Serilog.Sinks.RollingFileAlternate.Tests
 {
@@ -13,7 +13,7 @@ namespace Serilog.Sinks.RollingFileAlternate.Tests
         [Fact]
         public void ReachedWhenAmountOfCharactersWritten()
         {
-            var formatter = new RawFormatter();
+            var formatter = new CompactJsonFormatter();
             var components = new SizeLimitedLogFileInfo(new DateTime(2015, 01, 15), 0, string.Empty);
             var logFile = new SizeLimitedLogFileDescription(components, 1, string.Empty);
             using (var str = new MemoryStream())
