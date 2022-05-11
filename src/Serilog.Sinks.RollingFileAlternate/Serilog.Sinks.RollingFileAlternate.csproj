@@ -14,7 +14,7 @@
     <PackageId>Serilog.Sinks.RollingFileAlternate</PackageId>
     <PackageTags>serilog;logging;filelog;log</PackageTags>
     <PackageProjectUrl>https://github.com/OronDF343/sinks-rollingfile</PackageProjectUrl>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/OronDF343/sinks-rollingfile</RepositoryUrl>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
